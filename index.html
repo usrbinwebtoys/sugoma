@@ -5,6 +5,7 @@
         <script src="fartscroll.js"></script>
         <script>
         $(document).ready(function() {
+            animateDiv('#squid');
             // Ensure the page always has more scrolling
             $(document).scroll(function() {
                 while ((window.pageYOffset + window.innerHeight) >= $(this).height() - (window.innerHeight / 2)) {
@@ -19,11 +20,29 @@
                 audio.volume = 0.8;
                 audio.play();
             });
+            
+            function makeNewPosition() {
+                var h = $(window).height() - 50;
+                var w = $(window).width() - 50;
+
+                var nh = Math.floor(Math.random() * h);
+                var nw = Math.floor(Math.random() * w);
+
+                return [nh,nw];    
+            }
+            
+            function animateDiv(id) {
+                var newq = makeNewPosition();
+                $(id).animate({ top: newq[0], left: newq[1] }, function() {
+                    animateDiv(id);        
+                });   
+            }
         });
         </script>
     </head>
     <body>
       <audio src="mrsquidward.mp3" loop="loop"></audio>
+      <img src="babysquid.webp" id="squid"/>
       sugoma dicc
         <ul>
             <li>ligma unordered balls lmao</li>
