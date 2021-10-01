@@ -14,6 +14,14 @@
 		this.play();
 	    });
 		
+	    $("#krabs").on("click", function() {
+		$("#mrsquidward").paused ? $("#mrsquidward").play() : $("#mrsquidward").pause(); 
+	    });
+		
+	    $("#wham").on("click", function() {
+		$("#wakemeup").paused ? $("#wakemeup").play() : $("#wakemeup").pause(); 
+	    });
+		
             animateDiv('#squid');
             // Ensure the page always has more scrolling
             $(document).scroll(function() {
@@ -44,10 +52,12 @@
         </script>
     </head>
     <body>
-      <audio src="mrsquidward.mp3" loop="loop"></audio>
-      <audio src="wakemeup.mp3" loop="loop"></audio>
+      <audio id="mrsquidward" src="mrsquidward.mp3" loop="loop"></audio>
+      <audio id="wakemeup" src="wakemeup.mp3" loop="loop"></audio>
       <img src="babysquid.webp" id="squid" style="position: fixed; width: 300px; height: 300px;"/>
       sugoma dicc
+	<button id="wham">SHUT THE FUCK UP GEORGE MICHAEL</button>
+	<button id="krabs">SHUT THE FUCK UP MR KRABS</button>
         <ul>
             <li>ligma unordered balls lmao</li>
         </ul>
