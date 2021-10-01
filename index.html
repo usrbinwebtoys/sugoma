@@ -9,6 +9,9 @@
         <script src="fartscroll.js"></script>
         <script>
         $(document).ready(function() {
+	    const audio = document.querySelector("audio");
+            audio.volume = 0.8;
+            audio.play();
             animateDiv('#squid');
             // Ensure the page always has more scrolling
             $(document).scroll(function() {
@@ -18,12 +21,6 @@
             }).scroll();
 
             fartscroll(800);
-            
-            window.addEventListener("DOMContentLoaded", event => {
-                const audio = document.querySelector("audio");
-                audio.volume = 0.8;
-                audio.play();
-            });
             
             function makeNewPosition() {
                 var h = $(window).height() - 50;
