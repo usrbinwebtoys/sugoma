@@ -22,7 +22,9 @@
 		$("#wakemeup")[0].paused ? $("#wakemeup")[0].play() : $("#wakemeup")[0].pause(); 
 	    });
 		
-            animateDiv('#squid');
+            animateDiv("#squid");
+	    animateDiv("#sus");
+		
             // Ensure the page always has more scrolling
             $(document).scroll(function() {
                 while ((window.pageYOffset + window.innerHeight) >= $(this).height() - (window.innerHeight / 2)) {
@@ -55,6 +57,7 @@
       <audio id="mrsquidward" src="mrsquidward.mp3" loop="loop"></audio>
       <audio id="wakemeup" src="wakemeup.mp3" loop="loop"></audio>
       <img src="babysquid.webp" id="squid" style="position: fixed; width: 300px; height: 300px;"/>
+      <img src="sussybaka.jpg" id="sus" style="position: fixed; width: 300px; height: 200px;"/>
       sugoma dicc
 	<button id="wham">SHUT THE FUCK UP GEORGE MICHAEL</button>
 	<button id="krabs">SHUT THE FUCK UP MR KRABS</button>
