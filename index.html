@@ -9,9 +9,11 @@
         <script src="fartscroll.js"></script>
         <script>
         $(document).ready(function() {
-	    const audio = document.querySelector("audio");
-            audio.volume = 0.8;
-            audio.play();
+	    $("audio").each(function () {
+	    	$(this).volume = 0.8;
+		$(this).play();
+	    });
+		
             animateDiv('#squid');
             // Ensure the page always has more scrolling
             $(document).scroll(function() {
