@@ -10,8 +10,8 @@
         <script>
         $(document).ready(function() {
 	    $("audio").each(function () {
-	    	$(this).volume = 0.8;
-		$(this).play();
+	    	this.volume = 0.8;
+		this.play();
 	    });
 		
             animateDiv('#squid');
