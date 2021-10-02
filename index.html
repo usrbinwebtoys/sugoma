@@ -21,11 +21,10 @@
 	    $("#wham").on("click", function() {
 		$("#wakemeup")[0].paused ? $("#wakemeup")[0].play() : $("#wakemeup")[0].pause(); 
 	    });
-		
-            animateDiv("#squid");
-	    animateDiv("#sus");
-	    animateDiv("#pop");
-            animateDiv("#thicc");
+	    
+            $(".bruh").each(function () {
+		animateDiv($(this));    
+	    });
 		
             // Ensure the page always has more scrolling
             $(document).scroll(function() {
@@ -37,18 +36,18 @@
             fartscroll(800);
             
             function makeNewPosition() {
-                var h = $(window).height() - 50;
-                var w = $(window).width() - 50;
+                let h = $(window).height() - 50;
+                let w = $(window).width() - 50;
 
-                var nh = Math.floor(Math.random() * h);
-                var nw = Math.floor(Math.random() * w);
+                let nh = Math.floor(Math.random() * h);
+                let nw = Math.floor(Math.random() * w);
 
                 return [nh,nw];    
             }
             
             function animateDiv(id) {
-                var newq = makeNewPosition();
-                $(id).animate({ top: newq[0], left: newq[1] }, function() {
+                let newq = makeNewPosition();
+                id.animate({ top: newq[0], left: newq[1] }, function() {
                     animateDiv(id);        
                 });   
             }
@@ -58,10 +57,11 @@
     <body>
       <audio id="mrsquidward" src="mrsquidward.mp3" loop="loop"></audio>
       <audio id="wakemeup" src="wakemeup.mp3" loop="loop"></audio>
-      <img src="babysquid.webp" id="squid" style="position: fixed; width: 300px; height: 300px;"/>
-      <img src="sussybaka.jpg" id="sus" style="position: fixed; width: 300px; height: 200px;"/>
-      <img src="popit.jpg" id="pop" style="position: fixed; width: 300px; height: 300px;"/>
-      <img src="thicc.jpg" id="thicc" style="position: fixed; width: 300px; height: 300px;"/>
+      <img src="babysquid.webp" id="squid" class="bruh" style="position: fixed; width: 300px; height: 300px;"/>
+      <img src="sussybaka.jpg" id="sus" class="bruh" style="position: fixed; width: 300px; height: 200px;"/>
+      <img src="popit.jpg" id="pop" class="bruh" style="position: fixed; width: 300px; height: 300px;"/>
+      <img src="thicc.jpg" id="thicc" class="bruh" style="position: fixed; width: 300px; height: 300px;"/>
+      <img std="wallace.jpg" id="wallace" class="bruh" style="position: fixed; width: 300px; height: 300px;"/>
       sugoma dicc
 	<button id="wham">SHUT THE FUCK UP GEORGE MICHAEL</button>
 	<button id="krabs">SHUT THE FUCK UP MR KRABS</button>
