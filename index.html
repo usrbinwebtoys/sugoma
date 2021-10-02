@@ -9,6 +9,9 @@
         <script src="fartscroll.js"></script>
         <script>
         $(document).ready(function() {
+	    const inith = $(window).height() - 50;
+	    const initw = $(window).width() - 50;
+		
 	    $("audio").each(function () {
 	    	this.volume = 0.8;
 		this.play();
@@ -34,9 +37,6 @@
             }).scroll();
 
             fartscroll(800);
-            
-	    const inith = $(window).height() - 50;
-	    const initw = $(window).width() - 50;
 		
             function makeNewPosition() {
                 let nh = Math.floor(Math.random() * inith);
