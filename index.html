@@ -2,69 +2,12 @@
     <head>
         <title>Spell Kid Amogus Backwards</title>
         <script
-			  src="https://code.jquery.com/jquery-3.6.0.min.js"
-			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-			  crossorigin="anonymous">
-        </script>
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"
+        ></script>
         <script src="fartscroll.js"></script>
-        <script>
-        $(document).ready(function() {
-	    $("audio").each(function () {
-	    	this.volume = 0.8;
-		this.play();
-	    });
-		
-	    $("#krabs").on("click", function() {
-		$("#mrsquidward")[0].paused ? $("#mrsquidward")[0].play() : $("#mrsquidward")[0].pause(); 
-	    });
-		
-	    $("#wham").on("click", function() {
-		$("#wakemeup")[0].paused ? $("#wakemeup")[0].play() : $("#wakemeup")[0].pause(); 
-	    });
-	    
-            $(".bruh").each(function () {
-		animateDiv($(this));    
-	    });
-		
-            // Ensure the page always has more scrolling
-            $(document).scroll(function() {
-                while ((window.pageYOffset + window.innerHeight) >= $(this).height() - (window.innerHeight / 2)) {
-                    $('ul').append('<li>ligma unordered balls lmao</li>');
-                }
-            }).scroll();
-
-            fartscroll(800);
-		
-            function makeNewPosition() {
-		const inith = $(window).innerHeight() - 50;
-	        const initw = $(window).innerWidth() - 50;
-                let nh = Math.floor(Math.random() * inith);
-                let nw = Math.floor(Math.random() * initw);
-                return [nh,nw];    
-            }
-            
-            function animateDiv(id) {
-                let newq = makeNewPosition();
-                id.animate({ top: newq[0], left: newq[1] }, function() {
-                    animateDiv(id);        
-                });   
-            }
-        });
-        </script>
+        <script src="index.js?v=1"></script>
     </head>
-    <body>
-      <audio id="mrsquidward" src="mrsquidward.mp3" loop="loop"></audio>
-      <audio id="wakemeup" src="wakemeup.mp3" loop="loop"></audio>
-      <img src="babysquid.webp" id="squid" class="bruh" style="position: fixed; width: 300px; height: 300px;"/>
-      <img src="sussybaka.jpg" id="sus" class="bruh" style="position: fixed; width: 300px; height: 200px;"/>
-      <img src="popit.jpg" id="pop" class="bruh" style="position: fixed; width: 300px; height: 300px;"/>
-      <img src="thicc.jpg" id="thicc" class="bruh" style="position: fixed; width: 300px; height: 300px;"/>
-      <img src="wallace.jpg" id="wallace" class="bruh" style="position: fixed; width: 300px; height: 300px;"/>
-      sugoma dicc
-	<button id="wham">SHUT THE FUCK UP GEORGE MICHAEL</button>
-	<button id="krabs">SHUT THE FUCK UP MR KRABS</button>
-        <ul>
-            <li>ligma unordered balls lmao</li>
-        </ul>
-    </body>
+    <body></body>
 </html>
