@@ -9,5 +9,6 @@ $(document).ready(function () {
                 }px`,
             })
         );
+        new Audio("vineboom.mp3").play();
     });
 });
