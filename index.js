@@ -61,16 +61,18 @@ $(document).ready(function () {
             })
         );
     $("body").on("click", function (e) {
+        const imgWidth = Math.random() * 425 + 100;
+        const imgHeight = Math.random() * 425 + 100;
         $(this).append(
             $("<img />")
                 .attr({
                     id: "boomcircle",
                     src: "redcirlce.png",
                     style: `position: absolute; left: ${
-                        e.pageX - 112.5
-                    }px; top: ${e.pageY - 112.5}px; width: ${
-                        Math.random() * 425 + 100
-                    }px; height: ${Math.random() * 425 + 100}px;`,
+                        e.pageX - imgWidth / 2
+                    }px; top: ${
+                        e.pageY - imgHeight / 2
+                    }px; width: ${imgWidth}px; height: ${imgHeight}px;`,
                 })
                 .hide()
                 .fadeIn(100)
