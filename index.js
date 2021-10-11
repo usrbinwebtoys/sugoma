@@ -15,7 +15,7 @@ $(document).ready(function () {
                 .fadeOut(1000)
                 .remove()
         );
-        if ($("#rock").first().attr("src") === "") {
+        if (!$("#rock").length) {
             $(this).append(
                 $("<video autoplay/>")
                     .attr({
@@ -28,8 +28,6 @@ $(document).ready(function () {
                     })
                     .hide()
                     .fadeIn(100)
-                    .delay(4679)
-                    .attr("src", "")
             );
         }
         new Audio("vineboom.mp3").play();
