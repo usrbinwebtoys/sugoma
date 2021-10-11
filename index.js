@@ -47,6 +47,11 @@ $(document).ready(function () {
                     $(this).remove();
                 })
         );
+
+        $("video").each(function () {
+            $(this)[0].play();
+        });
+
         new Audio("vineboom.mp3").play();
         if (Math.random() < 0.25) {
             new Audio(sounds[Math.floor(Math.random() * sounds.length)]).play();
