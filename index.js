@@ -1,9 +1,11 @@
 $(document).ready(function () {
     $("body").on("click", function (e) {
-        $(this).append($("<img />"), {
-            id: "boomcircle",
-            src: "redcirlce.png",
-            style: `position: absolute; left: ${e.pageX}px; top: ${e.pageY}px`,
-        });
+        $(this).append(
+            $("<img />").attr({
+                id: "boomcircle",
+                src: "redcirlce.png",
+                style: `position: absolute; left: ${e.pageX}px; top: ${e.pageY}px`,
+            })
+        );
     });
 });
