@@ -17,6 +17,7 @@ const vjos = [
     "wifi.mp4",
     "ayo.mp4",
     "letroll.mp4",
+    "morty.mp4",
 ];
 
 const sounds = [
