@@ -6,11 +6,41 @@ const vjos = [
     "cumlord.mp4",
     "deniro.mp4",
     "doug.mp4",
+    "matthew.mp4",
+    "waffle.mp4",
+    "fax.mp4",
+    "crab.mp4",
+    "speen.mp4",
+    "worm.mp4",
+    "idonesia.mp4",
+    "keem.mp4",
+    "wifi.mp4",
+    "ayo.mp4",
+    "letroll.mp4",
 ];
 
-const sounds = ["amongus.mp3", "fart.mp3", "bruh.mp3", "rtusa.mp3"];
+const sounds = [
+    "amongus.mp3",
+    "fart.mp3",
+    "bruh.mp3",
+    "rtusa.mp3",
+    "bass.mp3",
+    "burp.mp3",
+    "borger.mp3",
+    "crazyrun.mp3",
+    "crazyrunloud.mp3",
+    "horny.mp3",
+    "pacertest.mp3",
+    "taco.mp3",
+    "yeey.mp3",
+    "dj.mp3",
+    "swiss.mp3",
+];
 
 $(document).ready(function () {
+    const width_ = $(window).width();
+    const height_ = $(window).height();
+
     $("body")
         .append(
             $("<video loop/>").attr({
