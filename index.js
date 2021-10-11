@@ -1,16 +1,13 @@
 $(document).ready(function () {
-    $(this).append(
-        $("<video loop/>")
-            .attr({
-                id: "vjo",
-                src: "",
-                width: 320,
-                height: 240,
-                type: "video/mp4",
-                style: "position: fixed; bottom: 0; left: 0;",
-            })
-            .hide()
-            .fadeIn(100)
+    $("body").append(
+        $("<video loop/>").attr({
+            id: "vjo",
+            src: "",
+            width: 320,
+            height: 240,
+            type: "video/mp4",
+            style: "position: fixed; bottom: 0; left: 0;",
+        })
     );
     $("body").on("click", function (e) {
         $(this).append(
