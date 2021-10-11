@@ -13,7 +13,26 @@ $(document).ready(function () {
                 .fadeIn(100)
                 .delay(10000)
                 .fadeOut(1000)
+                .remove()
         );
+        if (!$("#rock").length) {
+            $(this).append(
+                $("<video autoplay/>")
+                    .attr({
+                        id: "rock",
+                        src: "dwayne.mp4",
+                        width: 320,
+                        height: 240,
+                        type: "video/mp4",
+                        style: "position: fixed; bottom: 0; right: 0;",
+                    })
+                    .hide()
+                    .fadeIn(100)
+                    .delay(4579)
+                    .fadeOut(100)
+                    .remove()
+            );
+        }
         new Audio("vineboom.mp3").play();
         if (Math.random() < 0.25) {
             new Audio("amongus.mp3").play();
