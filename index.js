@@ -1,4 +1,10 @@
-const vjos = ["dwayne.mp4", "pussy.mp4"];
+const vjos = [
+    "dwayne.mp4",
+    "pussy.mp4",
+    "cum.mp4",
+    "gilbert.mp4",
+    "cumlord.mp4",
+];
 
 $(document).ready(function () {
     $("body")
@@ -43,11 +49,12 @@ $(document).ready(function () {
         }
     });
 
-    setInterval(function () {
+    (function playTheFunny() {
         $("video").each(function () {
             $(this)
                 .attr("src", vjos[Math.floor(Math.random() * vjos.length)])[0]
                 .play();
         });
-    }, 10000);
+        setTimeout(playTheFunny, 5000);
+    })();
 });
