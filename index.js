@@ -12,7 +12,9 @@ $(document).ready(function () {
                 .hide()
                 .fadeIn(100)
                 .delay(10000)
-                .fadeOut(1000)
+                .fadeOut(1000, function () {
+                    $(this).remove();
+                })
         );
 
         if (!$("#rock").length) {
