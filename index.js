@@ -68,7 +68,9 @@ $(document).ready(function () {
                     src: "redcirlce.png",
                     style: `position: absolute; left: ${
                         e.pageX - 112.5
-                    }px; top: ${e.pageY - 112.5}px`,
+                    }px; top: ${e.pageY - 112.5}px; width: ${
+                        Math.random() * 425 + 100
+                    }px; height: ${Math.random() * 425 + 100}px;`,
                 })
                 .hide()
                 .fadeIn(100)
