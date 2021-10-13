@@ -93,6 +93,28 @@ $(document).ready(function () {
         $("#booms").html(vinebooms++);
     });
 
+    $("body").on("contextmenu", function (e) {
+        e.preventDefault();
+        const imgWidth = Math.random() * 516 + 100;
+        const imgHeight = Math.random() * 390 + 100;
+        $(this).append(
+            $("<img />")
+                .attr({
+                    id: "dingarrow",
+                    src: "arrow.png",
+                    style: `position: absolute; left: ${e.pageX}px; top: ${
+                        e.pageY - imgHeight / 2
+                    }px; width: ${imgWidth}px; height: ${imgHeight}px;`,
+                })
+                .delay(10000)
+                .fadeOut(1000, function () {
+                    $(this).remove();
+                })
+        );
+        new Audio("ding.mp3").play();
+        return false;
+    });
+
     (function playTheFunny() {
         $("video").each(function () {
             $(this)
