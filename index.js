@@ -39,9 +39,6 @@ const sounds = [
 ];
 
 $(document).ready(function () {
-    const width_ = $(window).width();
-    const height_ = $(window).height();
-
     $("body")
         .append(
             $("<video loop/>").attr({
@@ -62,6 +59,7 @@ $(document).ready(function () {
             })
         );
     $("body").on("click", function (e) {
+        ++vinebooms;
         const imgWidth = Math.random() * 425 + 100;
         const imgHeight = Math.random() * 425 + 100;
         $(this).append(
@@ -91,6 +89,8 @@ $(document).ready(function () {
         if (Math.random() < 0.25) {
             new Audio(sounds[Math.floor(Math.random() * sounds.length)]).play();
         }
+
+        $("#booms").html(vinebooms++);
     });
 
     (function playTheFunny() {
