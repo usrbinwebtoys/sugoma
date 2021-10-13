@@ -106,7 +106,7 @@ $(document).ready(function () {
                         e.pageY - imgHeight / 2
                     }px; width: ${imgWidth}px; height: ${imgHeight}px; transform: rotate(${
                         Math.random() * 360
-                    }deg);`,
+                    }deg); transform-origin: 0% 50%;`,
                 })
                 .delay(10000)
                 .fadeOut(1000, function () {
