@@ -39,6 +39,7 @@ const sounds = [
 ];
 
 $(document).ready(function () {
+    let vinebooms = 0;
     $("body")
         .append(
             $("<video loop/>").attr({
@@ -59,7 +60,6 @@ $(document).ready(function () {
             })
         );
     $("body").on("click", function (e) {
-        ++vinebooms;
         const imgWidth = Math.random() * 425 + 100;
         const imgHeight = Math.random() * 425 + 100;
         $(this).append(
