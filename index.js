@@ -18,6 +18,8 @@ const vjos = [
     "ayo.mp4",
     "letroll.mp4",
     "morty.mp4",
+    "pebnis.mp4",
+    "dietcock.mp4",
 ];
 
 const sounds = [
