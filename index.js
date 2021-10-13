@@ -39,7 +39,7 @@ const sounds = [
 ];
 
 $(document).ready(function () {
-    let vinebooms = 0;
+    let vinebooms = 1;
     $("body")
         .append(
             $("<video loop/>").attr({
