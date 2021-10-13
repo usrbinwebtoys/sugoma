@@ -104,7 +104,9 @@ $(document).ready(function () {
                     src: "arrow.png",
                     style: `position: absolute; left: ${e.pageX}px; top: ${
                         e.pageY - imgHeight / 2
-                    }px; width: ${imgWidth}px; height: ${imgHeight}px;`,
+                    }px; width: ${imgWidth}px; height: ${imgHeight}px; transform: rotate(${
+                        Math.random() * 360
+                    }deg);`,
                 })
                 .delay(10000)
                 .fadeOut(1000, function () {
