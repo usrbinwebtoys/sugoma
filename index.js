@@ -38,6 +38,7 @@ const sounds = [
     "yeey.mp3",
     "dj.mp3",
     "swiss.mp3",
+    "mcdonald.mp3",
 ];
 
 $(document).ready(function () {
