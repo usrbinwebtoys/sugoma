@@ -282,22 +282,26 @@ $(document).ready(function () {
     let vinebooms = 1;
     $("body")
         .append(
-            $("<video loop/>").attr({
-                src: "",
-                width: 320,
-                height: 240,
-                type: "video/mp4",
-                style: "position: fixed; bottom: 0; left: 0;",
-            })
+            $("<video loop/>")
+                .attr({
+                    src: "",
+                    width: 320,
+                    height: 240,
+                    type: "video/mp4",
+                    style: "position: fixed; bottom: 0; left: 0;",
+                })
+                .prop("volume", 0.5)
         )
         .append(
-            $("<video loop/>").attr({
-                src: "",
-                width: 320,
-                height: 240,
-                type: "video/mp4",
-                style: "position: fixed; top: 0; right: 0;",
-            })
+            $("<video loop/>")
+                .attr({
+                    src: "",
+                    width: 320,
+                    height: 240,
+                    type: "video/mp4",
+                    style: "position: fixed; top: 0; right: 0;",
+                })
+                .prop("volume", 0.5)
         );
 
     $("body")
@@ -384,6 +388,7 @@ $(document).ready(function () {
                 .attr("src", vjos[Math.floor(Math.random() * vjos.length)])[0]
                 .play();
         });
+        setTimeout(playTheFunny, 5000);
     })();
 
     (function funnyMemeText() {
